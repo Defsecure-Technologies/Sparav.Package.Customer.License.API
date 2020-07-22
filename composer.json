@@ -1,0 +1,15 @@
+{
+
+    "autoload": {
+        "psr-4": {
+            "Sparav\\CustomerLicense\\": "src"
+        }
+    },
+
+    "name": "sparav/customerlicense",
+    "description": "Sparav Customer license api",
+    "type": "MOT",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {}
+}
