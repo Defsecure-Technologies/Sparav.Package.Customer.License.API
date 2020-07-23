@@ -11,5 +11,6 @@
     "type": "MOT",
     "license": "MIT",
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+    }
 }
