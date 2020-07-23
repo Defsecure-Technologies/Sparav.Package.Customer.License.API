@@ -1,6 +1,6 @@
 <?php
 
-namespace Sparav\Enums;
+namespace Sparav\CustomerLicense\Enums;
 
 use BenSampo\Enum\Enum;
 
