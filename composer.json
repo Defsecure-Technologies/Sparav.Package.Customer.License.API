@@ -11,5 +11,7 @@
     "type": "MOT",
     "license": "MIT",
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "bensampo/laravel-enum": "^2.0"
+    }
 }
