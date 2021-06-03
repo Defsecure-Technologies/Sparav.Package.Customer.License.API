@@ -4,6 +4,7 @@ namespace Sparav\CustomerLicense;
 
 use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;
+use Sparav\CustomerLicense\Model\CustomerLicenseRequest;
 
 class CustomerLicenseClientV1
 {
@@ -37,6 +38,17 @@ class CustomerLicenseClientV1
         return $response;
     }
 
+    /**
+     * @param CustomerLicenseRequest $customerLicenseRequest
+     * @return Response
+     */
+    public function patch(CustomerLicenseRequest $customerLicenseRequest) {
+        $response = Http::timeout(15)
+            ->withBasicAuth(env('SPARAV_CUSTOMERLICENSE_API_AUTH_USERNAME'), env('SPARAV_CUSTOMERLICENSE_API_AUTH_PASSWORD'))
+            ->post('https://sparavcustomerlicenseapiprod.azurewebsites.net/api/v1/customerlicense',
+                (array) $customerLicenseRequest);
+        return $response;
+    }
 
     /**
      * @param int $customer_id
