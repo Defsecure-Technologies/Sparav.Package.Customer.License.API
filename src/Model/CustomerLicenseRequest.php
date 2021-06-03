@@ -32,4 +32,6 @@ class CustomerLicenseRequest
      */
     public string $expires_at;
 
+    public int $product_id;
+
 }
