@@ -6,6 +6,9 @@ namespace Sparav\CustomerLicense\Model;
 class CustomerLicenseRequest
 {
 
+
+    public int $customer_id;
+
     /**
      * @OA\Property(type="string", default=1)
      */
@@ -20,6 +23,9 @@ class CustomerLicenseRequest
      * @OA\Property(type="integer", default=1)
      */
     public int $status;
+
+    // sparvpn etc..
+    public int $source;
 
     /**
      * @OA\Property(type="string", default=1)
