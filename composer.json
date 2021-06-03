@@ -10,8 +10,5 @@
     "description": "Sparav Customer license api",
     "type": "MOT",
     "license": "MIT",
-    "minimum-stability": "dev",
-    "require": {
-        "bensampo/laravel-enum": "^2.0"
-    }
+    "minimum-stability": "dev"
 }
