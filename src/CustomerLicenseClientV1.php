@@ -25,7 +25,7 @@ class CustomerLicenseClientV1
     {
         $response = Http::timeout(15)
             ->withBasicAuth(env('SPARAV_CUSTOMERLICENSE_API_AUTH_USERNAME'), env('SPARAV_CUSTOMERLICENSE_API_AUTH_PASSWORD'))
-            ->post('https://sparavcustomerlicenseapiprod.azurewebsites.net/api/v1/customerlicense',
+            ->patch('https://sparavcustomerlicenseapiprod.azurewebsites.net/api/v1/customerlicense',
                 [
                     'customer_id' => $customer_id,
                     'license_type' => $license_type,
