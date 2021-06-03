@@ -19,9 +19,10 @@ class CustomerLicenseClientV1
      * @param string $device_type
      * @param int $source
      * @param int $product_id
+     * @param string $expires_at
      * @return Response
      */
-    public function add(int $customer_id, ?string $license_type, ?string $license_username, ?string $license_password, string $device_type, int $source, int $product_id)
+    public function add(int $customer_id, ?string $license_type, ?string $license_username, ?string $license_password, string $device_type, int $source, int $product_id, string $expires_at)
     {
         $response = Http::timeout(15)
             ->withBasicAuth(env('SPARAV_CUSTOMERLICENSE_API_AUTH_USERNAME'), env('SPARAV_CUSTOMERLICENSE_API_AUTH_PASSWORD'))
@@ -33,7 +34,8 @@ class CustomerLicenseClientV1
                     'license_password' => $license_password,
                     'device_type'  => $device_type,
                     'source' => $source,
-                    'product_id' => $product_id
+                    'product_id' => $product_id,
+                    'expires_at' => $expires_at
                 ]);
         return $response;
     }
